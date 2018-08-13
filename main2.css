@@ -1,0 +1,332 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+    border-spacing: 0;
+    line-height: 35px;
+}
+
+body
+{
+    color: #474747;
+    font-family: "微軟正黑體", sens-serif;
+    font-size: 18px; 
+    font-weight: 500;
+    background-color: #e0e0e0;
+}
+
+img
+{
+    width: 100%;
+}
+
+h1
+{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+h2
+{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+h3
+{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 20px 2%;
+}
+
+li
+{
+    padding: 0 5px;
+}
+
+article,section, aside
+{
+    margin: 10px 2%;
+}
+
+
+footer
+{
+    font-size: 10px;
+    padding: 10px 0px;
+    margin: 10px 2% 10px 2%;
+    text-align: center;
+}
+
+.banner
+{
+    /*background-color: #7c7c7c;*/
+    background-image: url(345.png);
+    margin: 2% 2% 1% 2%;
+    text-align: center;
+    color: #e0e0e0;
+    text-shadow: 1px 1px #333333;
+    padding: 1.5em 0 0.5em 0;
+}
+
+.banner h1
+{
+    font-size: 3em;
+    line-height: 1.5em;
+}
+
+.banner h2
+{
+    font-size: 1.2em;
+}
+
+#mainmenu
+{
+    background-color: #f7f7f7;
+    margin: 2%;
+    padding: 10px;
+}
+
+#mainmenu nav
+{
+    background-color: #333333;
+    margin: 0%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 5px 0;
+    width: 100%;
+}
+
+#mainmenu nav li
+{
+    display: inline-block;
+    width: 24%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#mainmenu a
+{
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+#mainmenu a:hover
+{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#mainmenu nav ul
+{
+    padding: 5px 0 3px 0;
+}
+
+.container
+{
+    background-color: #f7f7f7;
+    margin: 2%;
+    padding: 1%;
+}
+
+.home
+{
+    line-height: 1.3em;
+}
+
+.home h1
+{
+    font-size: 1.5em;
+}
+
+.home h2
+{
+    font-size: 1.2em;
+}
+
+/* 只是背景 */
+#DivGround
+{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 30px;
+    left: 30px;
+    border: solid;
+    background-color: #66ccff;
+ text-align:center;
+}
+
+/* 遮罩，將整個瀏覽器佈滿，讓原本背景層都無法點選 */
+#DivOverlapMask
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    background:gray;
+    opacity:0.85;
+    /*visibility:hidden;*/
+    display: none;
+ z-index: 1; /* 預設是0 */
+}
+
+/* Modal Dialog 層 */
+#DivDialog
+{
+    position:fixed;
+    width:30%;
+    height:30%;
+    margin:0;
+    padding:0;
+    left:35%;
+    top:40%;
+        background-color: #eeaaaa;
+    border-radius: 10px;
+    /*visibility:hidden;*/
+ display: none;
+}
+
+
+/*「X」按鈕 */
+#closeDialog
+{
+    position:absolute;
+    width:32px;
+    height:32px;
+    right:8px;
+    top:8px;
+    cursor: pointer;
+    display: none;
+ /*visibility:hidden; */
+}
+
+@media only screen and (min-width: 840px)
+{
+    #mainmenu
+    {
+        display: block;
+        float: left;
+        width: 20%;
+        margin: 0 0 2% 2%;
+    }
+
+    #mainmenu nav
+    {
+        position: static;
+    }
+
+    #mainmenu nav li
+    {
+        display: block;
+        width: 100%;
+        margin: 2% 1%;
+        text-align: left;
+        padding: 10px 5px;
+    }
+
+    .container
+    {
+        float: right;
+        width: 73%;
+        margin: 0 2% 1% 0;
+        box-sizing: border-box;
+    }
+
+    footer
+    {
+        clear: both;
+    }
+    @media only screen and (min-width: 300px)
+{
+    #mainmenu
+    {
+        display: block;
+        float: left;
+        width: 20%;
+        margin: 0 0 2% 2%;
+    }
+
+    #mainmenu nav
+    {
+        position: static;
+    }
+
+    #mainmenu nav li
+    {
+        display: block;
+        width: 50%;
+        margin: 2% 1%;
+        text-align: left;
+        padding: 10px 5px;
+    }
+
+    }
+
+    .container
+    {
+        float: right;
+        width: 73%;
+        margin: 0 2% 1% 0;
+        box-sizing: border-box;
+    }
+
+    footer
+    {
+        clear: both;
+    }
+   
+   
+
+        
+}
+        
